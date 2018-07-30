@@ -1,36 +1,39 @@
-Lab 1: Creation of each persona in BIG-IQ
------------------------------------------
-.. note:: Marco, Paula, Paul and Larry are already created in the blueprint,so only the **david** user needs to be created.
+Lab 1: Adding BIG-IQ DCD
+------------------------
 
-We will be using 4 main personas for this lab:
+Log in to the BIG-IQ Console Node (10.1.1.4 admin/admin)
 
-1. **Marco**: Full Administrator
-2. **Larry**: Security Manager
-3. **Paula**: Application Manager VMware
-4. **Paul**: Application Manager AWS
-5. **David**: Super-NetOps
+- Under System => BIG-IQ DATA COLLECTION
+- Select BIG-IQ Data Collection Devices
+- Click the Add button
 
-**Marco** will have full access to BIG-IQ. He knows a lot about F5 products (BIG-IQ/BIG-IP).
-He will provide the access to David, Larry and Paula. He will also manage the Service Scaling Group (SSG)
-and application templates.
+.. image:: ../pictures/module1/img_module1_lab1_1.png
+  :align: center
+  :scale: 50%
 
-**Larry** will manage the Web Application Firewall (WAF) policies. He will work with Paula's team
-to define the necessary security policies for each applications.
-Ensure teams comply with security policies, industry rules and regulations, and best practices.
-Keeping up to date on threats, determining their potential impact, and mitigating the risks.
+- Add the DCD Management IP Address (10.1.1.13), Username admin, Password admin, and the Data Collection IP Address (self-IP: 10.1.10.13). Data collection port default is 9300. Click the Add button in the lower right of the screen.
 
-**Paula** and **Paul** will manage the application deployments, monitor levels of app incidents, building solutions to address identified, prioritized business problems in a timely manner.
-Maximizing value of app through capabilities design, adoption, and usage.
-Ensuring that the app fits within the rest of the organization’s app portfolio strategy.
+.. image:: ../pictures/module1/img_module1_lab1_2.png
+  :align: center
+  :scale: 50%
 
-**David** will try automating whenever possible, to enable efficiency and ability to solve problems at scale.
-Automate common network patterns that the other teams can consume.
-Automate existing environment management and troubleshooting tasks.
+- Adding the DCD will take a minute or two:
 
-Connect to your BIG-IQ as **admin** and go to : *System* > *Users Management* > *Users*
-and verify each user & role below and change where needed.
+.. image:: ../pictures/module1/img_module1_lab1_3.png
+  :align: center
+  :scale: 50%
 
-**1. Marco: Full Administrator**
+- DCD item in UI displayed.
+
+-- Status – State indicator: Green(UP)|Yellow(Unhealthy)|Red(Down)
+-- Device name – Hostname of DCD (data collection device)
+-- IP Address – IP Address of interface used for data collection.
+-- Version – Software version of BIG-IQ DCD (data collection device)
+
+- Add Services to the new DCD Device by clicking the Add Services link under the services column
+
+-- Activate the Access, FPS, and Web Application Security stats. Make sure the Service Status is Active (each click may take a minute to register)
+
 
 - *Auth Provider* = Radius
 - *User Name* = marco
