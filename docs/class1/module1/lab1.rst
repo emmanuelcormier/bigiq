@@ -26,8 +26,11 @@ Log in to the BIG-IQ Console Node (10.1.1.4 admin/admin)
 - DCD item in UI displayed.
 
 -- Status – State indicator: Green(UP)|Yellow(Unhealthy)|Red(Down)
+
 -- Device name – Hostname of DCD (data collection device)
--- IP Address – IP Address of interface used for data collection.
+
+-- IP Address – IP Address of interface used for data collection
+
 -- Version – Software version of BIG-IQ DCD (data collection device)
 
 - Add Services to the new DCD Device by clicking the Add Services link under the services column
@@ -35,56 +38,27 @@ Log in to the BIG-IQ Console Node (10.1.1.4 admin/admin)
 -- Activate the Access, FPS, and Web Application Security stats. Make sure the Service Status is Active (each click may take a minute to register)
 
 
-- *Auth Provider* = Radius
-- *User Name* = marco
-- *Full Name* = Full Administrator
-- (*Password stored in Radius server* = marco)
-- *Role* = Administrator Role
+*Turn on statistics collection for existing devices*
 
-**2. Larry: Application Security Manager**
+For devices that were discovered before you added the DCD, you can now enable the statistics collection for those devices.
+Click on the Devices tab and click on the “Disabled” link under Stats Collection Status for **ip-10-1-1-7.us- west-2.compute.internal**
 
-- *Auth Provider* = Radius
-- *User Name* = larry
-- *Full Name* = Security Manager
-- (*Password stored in Radius server* = larry)
-- *Role* = Security Manager
+... note:: Make sure the device is showing green in the status column before adding stats
 
-**3. Paula: Application Manager VMware**
-
-- *Auth Provider* = Radius
-- *User Name* = paula
-- *Full Name* = Application Manager
-- (*Password stored in Radius server* = paula)
-- *Role* = Application Creator VMware (custom role with ALL default templates except AWS)
-
-**4. Paul: Application Manager AWS**
-
-- *Auth Provider* = Radius
-- *User Name* = paul
-- *Full Name* = Application Manager
-- (*Password stored in Radius server* = paul)
-- *Role* = Application Creator AWS (custom role with AWS default templates only)
-
-**5. David: Super-NetOps**
-
-Click on *Add*
-
-- *Auth Provider* = local
-- *User Name* = david
-- *Full Name* = Super-NetOps
-- *Password* = david
-- *Role* = Application Creator VMware (custom role with ALL default templates)
-
-Click on *Save & Close*`
-
-.. warning:: Only local users are supported to execute Ansible playbook
-
-.. image:: ../pictures/module1/img_module1_lab2_1.png
+.. image:: ../pictures/module1/img_module1_lab1_4.png
   :align: center
   :scale: 50%
 
-Application Creator VMware custom role:
+Click the Enabled button, accept the defaults, and click the Save & Close button in the lower right.
 
-.. image:: ../pictures/module1/img_module1_lab2_2.png
+.. image:: ../pictures/module1/img_module1_lab1_5.png
   :align: center
   :scale: 50%
+
+The Stats Collection Status field will go to “Task running...” while the statistics collection iApp is being installed on the target device.
+
+.. image:: ../pictures/module1/img_module1_lab1_6.png
+  :align: center
+  :scale: 50%
+
+We will come back later to check out the new statistics capabilities.
