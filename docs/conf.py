@@ -5,10 +5,10 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "F5 Cloud Edition Training"
+classname = "F5 BIG-IQ & Cloud Edition Training"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/f5devcentral/f5-big-iq-lab"
+github_repo = "https://github.com/emmanuelcormier/bigiq/"
 
 # OPTIONAL: Google Analytics
 # googleanalytics_id = 'UA-85156643-4'
@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.abspath('.'))
 import f5_sphinx_theme
 
 year = time.strftime("%Y")
-eventname = "Agility %s Hands-on Lab Guide" % (year)
+eventname = "%s Hands-on Lab Guide" % (year)
 
 rst_prolog = """
 .. |classname| replace:: %s
@@ -125,7 +125,7 @@ master_doc = 'index'
 # General information about the project.
 project = classname
 copyright = u'2018, F5 Networks, Inc.'
-author = u'Kyle Oliver, Roman Jouhanet, Nicolas Menant@F5 Networks, Inc.'
+author = u'Emmanuel CORMIER@F5 Networks, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
