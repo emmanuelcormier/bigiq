@@ -43,7 +43,7 @@ Log in to the BIG-IQ Console Node (10.1.1.4 admin/admin)
 For devices that were discovered before you added the DCD, you can now enable the statistics collection for those devices.
 Click on the Devices tab and click on the “Disabled” link under Stats Collection Status for **ip-10-1-1-7.us- west-2.compute.internal**
 
-... note:: Make sure the device is showing green in the status column before adding stats
+.. note:: Make sure the device is showing green in the status column before adding stats
 
 .. image:: ../pictures/module1/img_module1_lab1_4.png
   :align: center
