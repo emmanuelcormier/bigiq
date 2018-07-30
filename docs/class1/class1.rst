@@ -5,11 +5,9 @@ Class 1: BIG-IQ Application Creation
 
 In this class, we will review the application creation feature available with BIG-IQ 6.0.
 
-Below Virtual Servers and Pool Members can be used in the context of the  (`UDF lab`_) for this class.
+Below Virtual Servers and Pool Members can be used in the context of the lab for this class.
 
-.. _UDF lab: https://udf.f5.com/d/cf3810ee-4e02-4fd1-a0ec-747ee424920a#components
-
-.. warning:: After starting the blueprint in UDF, connect to the BIG-IP Cluster BOS-vBIGIP01.termmarc.com and BOS-vBIGIP02.termmarc.com, make sure the cluster shows **In Sync**.
+.. warning:: After starting the blueprint, connect to the BIG-IP Cluster BOS-vBIGIP01.termmarc.com and BOS-vBIGIP02.termmarc.com, make sure the cluster shows **In Sync**.
 
 - **vLab Test Web Site 16:** *(used in module 4)*
 
