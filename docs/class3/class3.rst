@@ -1,15 +1,13 @@
-Class 3:  BIG-IQ Analytics
+Class 4:  BIG-IQ Analytics
 ==========================
 
 .. note:: On this page there is no actions to be done here regarding the lab itself
 
 In this class, we will review the various analytics available for the applications and Service Scaling Group objects in BIG-IQ 6.0.
 
-Below Virtual Servers and Pool Members can be used in the context of the  (`UDF lab`_) for this class.
+Below Virtual Servers and Pool Members can be used in the context of the lab for this class.
 
-.. _UDF lab: https://udf.f5.com/d/cf3810ee-4e02-4fd1-a0ec-747ee424920a#components
-
-.. warning:: After starting the blueprint in UDF, connect to the BIG-IP Cluster BOS-vBIGIP01.termmarc.com and BOS-vBIGIP02.termmarc.com, make sure the cluster shows **In Sync**.
+.. warning:: After starting the blueprint, connect to the BIG-IP Cluster BOS-vBIGIP01.termmarc.com and BOS-vBIGIP02.termmarc.com, make sure the cluster shows **In Sync**.
 
 - **vLab Test Web Site 36:** *(used in module 2)*
 
