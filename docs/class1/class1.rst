@@ -1,9 +1,11 @@
-Class 1: BIG-IQ Application Creation
+Class 1: BIG-IQ Device Management
 ====================================
 
 .. note:: On this page there is no actions to be done here regarding the lab itself
 
-In this class, we will review the application creation feature available with BIG-IQ 6.0.
+In this class, we will review how to:
+- add BIG-IQ DCD (Data Collection Device) for statistical analysis,
+- import and manage BIG-IP devices
 
 Below Virtual Servers and Pool Members can be used in the context of the lab for this class.
 
