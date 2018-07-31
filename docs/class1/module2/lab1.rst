@@ -7,6 +7,7 @@ Adding a BIG-IP device to the BIG-IQ system inventory is the first step to manag
 2. On the top menu bar, select Devices from the BIG-IQ menu
 3. On the left-hand menu bar, click **BIG-IP Devices**
 4. Click the **Add Device** button in the main pane
+
 - In the **IP Address** (10.1.1.10) field, type the IPv4 or IPv6 address of the device.
 - In the **User Name** and **Password** fields, type the user name (admin) and password (admin) for the device
 - Cluster Display Name: Select **None**
