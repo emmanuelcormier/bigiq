@@ -1,7 +1,7 @@
 Lab 1: Adding BIG-IQ DCD
 ------------------------
 
-Log in to the BIG-IQ Console Node (10.1.1.4 admin/admin)
+Log in to the BIG-IQ Console Node (admin/admin)
 
 - Under System => BIG-IQ DATA COLLECTION
 - Select BIG-IQ Data Collection Devices

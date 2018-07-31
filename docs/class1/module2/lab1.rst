@@ -10,7 +10,7 @@ Adding a BIG-IP device to the BIG-IQ system inventory is the first step to manag
 
 - In the **IP Address** (10.1.1.10) field, type the IPv4 or IPv6 address of the device.
 - In the **User Name** and **Password** fields, type the user name (admin) and password (admin) for the device
-- Cluster Display Name: Select **None**
+- Cluster Display Name: Select **Use Existing** and choose **BostonCluster** in the list
 
 .. image:: ../pictures/module2/img_module2_lab1_1.png
   :align: center
