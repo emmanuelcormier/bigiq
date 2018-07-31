@@ -1,48 +1,88 @@
-Lab 3.3: Create Application via API (Python)
---------------------------------------------
-.. note :: This is an optional lab.
+Lab 3.3: Deploy Staged changes
+------------------------------
 
-.. warning :: **david** is used to do the API calls, make sure it has the correct permission and is a LOCAL user (c.f. Class 1 Module 1)
+Now that we have staged a number of changes on the BIG-IQ, we will evaluate the staged changes, and then deploy them to the BIG-IPs.
 
-In this lab, we are going to create an application using Python script and BIG-IQ API.
+1. Navigate to the Deployment tab on the top menu bar
 
-On BIG-IQ, connect as **david** (select Auth Provider local) to create a new application, click on **Create**, select the template previously created ``Default-f5-HTTP-lb-template``.
+2. Navigate to **EVALUATE & DEPLOY > Local Traffic & Network**
 
-- BIG-IP: Select ``SEA-vBIGIP01.termmarc.com``
-- Application Name: ``site20.example.com``
-- Destination Address: ``10.1.10.120``
-- Destination Network Mask: ``255.255.255.255``
-- Service Port: ``80``
-- Servers (Pool Member): ``10.1.20.120`` and ``10.1.20.121``
-
-**Do NOT click on Create** but on **View Sample API Request** at the top right corner.
-
-.. image:: ../pictures/module3/img_module3_lab3_1.png
+.. image:: ../pictures/module2/img_module3_lab3_1.png
   :align: center
   :scale: 50%
 
-|
+3. Click the Create button under Evaluations
 
-Open a SSH session to *Ubuntu Lamp Server* in UDF.
+4. Fill out the fields to Create Evaluation
 
-Look at the file ``/home/f5/class1mod3.py``
+- Name: DeployChgSet1
+- Source: Current Changes
+- Source Scope: All Changes
+- Unused Objects: Removed Unused Objects
+- Target: Select Group “All ADC Devices” and move all devices to Selected
 
-- The application name was set: APP_NAME = "``site20.example.com``"
-- Template name configured in ``templates`` variable (e.g. Default-f5-HTTP-lb-template)
-- BIG-IP management IP is used to filter the device where the app will be deployed in variable ``device`` (e.g. 10.1.1.7 for SEA-vBIGIP01.termmarc.com)
-- The API Sample Request generated previously from BIG-IQ UI was inserted in the script in the ``post_body`` variable (only until ``addAnalytics`` line)
+.. image:: ../pictures/module2/img_module3_lab3_2.png
+  :align: center
+  :scale: 50%
 
-Execute the Python script::
+5. Click the Create button in the lower right
 
-    # /home/f5/class1mod3.py
+.. image:: ../pictures/module2/img_module3_lab3_3.png
+  :align: center
+  :scale: 50%
 
-Output::
+6. After the evaluation completes, click the View link under Differences to review the changes that will be deployed
 
-    u'Polling task, Status: STARTED'
-    u'Polling task, Status: STARTED'
-    ....
-    u'Polling task, Status: STARTED'
-    u'Polling task, Status: STARTED'
-    u'Polling task, Status: FINISHED'
+.. image:: ../pictures/module2/img_module3_lab3_4.png
+  :align: center
+  :scale: 50%
 
-Connect as **david** (select Auth Provider local) and check on BIG-IQ the application has been correctly created.
+7. Review the staged changes for each device. Change devices with the selector in the upper left
+
+.. image:: ../pictures/module2/img_module3_lab3_5.png
+  :align: center
+  :scale: 50%
+
+Click on each change to review the differences
+
+.. image:: ../pictures/module2/img_module3_lab3_6.png
+  :align: center
+  :scale: 50%
+
+8. After you have reviewed all of the changes, click the Cancel button in the lower right
+
+.. image:: ../pictures/module2/img_module3_lab3_7.png
+  :align: center
+  :scale: 50%
+
+9. Click on the name of the Evaluation to review the options available there
+
+.. image:: ../pictures/module2/img_module3_lab3_8.png
+  :align: center
+  :scale: 50%
+
+10. You can review the changes to be deployed on a device by device basis and you can choose to exclude a device from the deployment at this point. At the bottom of the page, you can schedule the deployment for a later time, or you can Deploy Now. Click the Deploy Now button to push the changes to the BIG-IPs.
+
+.. image:: ../pictures/module2/img_module3_lab3_9.png
+  :align: center
+  :scale: 50%
+
+11. Click the Deploy button
+
+.. image:: ../pictures/module2/img_module3_lab3_10.png
+  :align: center
+  :scale: 50%
+
+12. At the bottom of the screen, you can review that your changes are being deployed
+
+.. image:: ../pictures/module2/img_module3_lab3_11.png
+  :align: center
+  :scale: 50%
+
+13. Click on the name of the Deployment to review what was deployed
+
+.. image:: ../pictures/module2/img_module3_lab3_12.png
+  :align: center
+  :scale: 50%
+
+14. Log in to SEA—vBIGIP01 using the TMUI and confirm that your deployment was successful. You should now see the MyAppVS on the Network Map.

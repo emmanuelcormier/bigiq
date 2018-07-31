@@ -1,38 +1,88 @@
-Lab 3.4: Automation Demo with Postman
--------------------------------------
-.. note :: This is an optional lab.
+Lab 3.4: Decommission a virtual server
+--------------------------------------
 
-.. warning :: **david** is used to do the API calls, make sure it has the correct permission and is a LOCAL user (c.f. Class 1 Module 1)
+BIG-IQ can be used to remove virtual servers, and other objects that are no longer needed. The same staged change workflow applies for removal of objects.
 
-Launch a RDP session to have access to the vCenter webui (vCenter runs as an instance
-in our ESXi). To do this, in your UDF deployment, click on the *Access* button
-of the *ESXi 6.5.0 + vCenter* system and select *VCENTER THROUGH UBUNTU*
+1. Navigate to the **Configuration** tab on the top menu bar
 
-.. image:: ../pictures/module3/img_module3_lab3_2.png
+2. Navigate to **LOCAL TRAFFIC > Virtual Servers**
+
+.. image:: ../pictures/module2/img_module3_lab4_1.png
   :align: center
   :scale: 50%
 
-|
+3. Select the top HR-CLONE virtual server
 
-Here is the credentials to use:
+.. image:: ../pictures/module2/img_module3_lab4_2.png
+  :align: center
+  :scale: 50%
 
-* login: ubuntu
-* Password: default
+4. Click the Delete button
 
-.. image:: ../pictures/module3/img_module3_lab3_3.png
-:align: center
-:scale: 50%
+5. Verify that you want to delete this virtual server from the BIG-IQ configuration
 
-To Launch Postman, open a terminal window::
+.. image:: ../pictures/module2/img_module3_lab4_3.png
+  :align: center
+  :scale: 50%
 
-    # postman
+6. Now we need to deploy this change. Navigate to the Deployment menu on the top menu bar
 
-.. image:: ../pictures/module3/img_module3_lab3_4.png
-:align: center
-:scale: 50%
+7. Navigate to **EVALUATE & DEPLOY > Local Traffic & Network**
 
-|
+.. image:: ../pictures/module2/img_module3_lab4_4.png
+  :align: center
+  :scale: 50%
 
-Follow instructions on the following `github`_.
+8. Click the Create button under Deployments
 
-.. _github: https://github.com/codygreen/BIG-IQ-Automation-Application-Service-Catalog
+  .. image:: ../pictures/module2/img_module3_lab4_5.png
+    :align: center
+    :scale: 50%
+
+9. Fill out the evaluation properties
+
+- Name: DeleteVirtual
+- Source: Current Changes
+- Source Scope: All Changes
+- Unused Objects: Remove Unused Objects Method: Create Evaluation
+- Target: Group, BostonCluster, both devices selected
+
+.. image:: ../pictures/module2/img_module3_lab4_6.png
+  :align: center
+  :scale: 50%
+
+10. Click the create button in the lower right
+
+.. image:: ../pictures/module2/img_module3_lab4_7.png
+  :align: center
+  :scale: 50%
+
+11. After the evaluation completes, review the differences by clicking the view link under Differences
+
+.. image:: ../pictures/module2/img_module3_lab4_8.png
+  :align: center
+  :scale: 50%
+
+12. Review the differences
+
+.. image:: ../pictures/module2/img_module3_lab4_9.png
+  :align: center
+  :scale: 50%
+
+13. After you have reviewed all of the changes, click the Cancel button in the lower right
+
+.. image:: ../pictures/module2/img_module3_lab4_10.png
+  :align: center
+  :scale: 50%
+
+14. Click the Deploy button to push the changes to the BIG-IPs
+
+.. image:: ../pictures/module2/img_module3_lab4_11.png
+  :align: center
+  :scale: 50%
+
+15. Verify that you want to deploy the changes to the selected devices
+
+.. image:: ../pictures/module2/img_module3_lab4_12.png
+  :align: center
+  :scale: 50%
