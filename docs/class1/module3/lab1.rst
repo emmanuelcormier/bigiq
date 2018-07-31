@@ -13,17 +13,13 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 3. Click the Create button to create a node
 
-.. image:: ../pictures/module2/img_module3_lab1_3.png
-  :align: center
-  :scale: 50%
-
 4. Fill out the configuration properties for the node
 
-- Name: MyAppNode1
-- Device: SEA-vBIGIP01.termmarc.com
-- Address: 10.1.10.110
+- Name: MyAppNode5
+- Device: BOS-vBIGIP01.termmarc.com
+- Address: 10.1.10.120
 
-.. image:: ../pictures/module2/img_module3_lab1_4.png
+.. image:: ../pictures/module2/img_module3_lab1_2.png
   :align: center
   :scale: 50%
 
@@ -31,93 +27,77 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 6. Repeat steps 4 and 5 for the second node
 
-- Name: MyAppNode2
-- Device: SEA-vBIGIP01.termmarc.com
-- Address: 10.1.10.111
+- Name: MyAppNode6
+- Device: BOS-vBIGIP01.termmarc.com
+- Address: 10.1.10.121
 
 7. Verify that the MyApp nodes are created by typing MyApp in the filter box in the upper right and pressing return
 
-.. image:: ../pictures/module2/img_module3_lab1_5.png
+8. You should now see an entry for each of the MyApp nodes on both BOS BIG-IPs.
+
+.. image:: ../pictures/module2/img_module3_lab1_3.png
   :align: center
   :scale: 50%
-
-8. You should now see an entry for each of the MyApp nodes on SEA-BIG-IP01.
 
 .. note:: When you create an object on a clustered device, BIG-IQ automatically replicates that configuration to the peer node in the staged configuration.
 
 9. Now we will create a pool with these nodes as pool members. Navigate to **LOCAL TRAFFIC > Pools**
 
-.. image:: ../pictures/module2/img_module3_lab1_6.png
+.. image:: ../pictures/module2/img_module3_lab1_4.png
   :align: center
   :scale: 50%
 
 10. Click the Create button to start creating your pool
 
-.. image:: ../pictures/module2/img_module3_lab1_7.png
-  :align: center
-  :scale: 50%
-
 11. Fill out the Pool Properties
 
-- Name: MyAppPool
-- Device: SEA-vBIGIP01.termmarc.com
+- Name: MyAppPool5
+- Device: BOS-vBIGIP01.termmarc.com
 - Health Monitors: /Common/tcp
 - Load Balancing Method: Round Robin
 
-.. image:: ../pictures/module2/img_module3_lab1_8.png
+.. image:: ../pictures/module2/img_module3_lab1_5.png
   :align: center
   :scale: 50%
 
 12. Click the Save & Close button in the lower right
 
-13. Click on the MyAppPool name in the list of pools to add pool members
-
-.. image:: ../pictures/module2/img_module3_lab1_9.png
-  :align: center
-  :scale: 50%
+13. Click on the MyAppPool5 name in the list of pools to add pool members
 
 14. Click on the New Member button under Resources to add pool members
-
-.. image:: ../pictures/module2/img_module3_lab1_10.png
-  :align: center
-  :scale: 50%
 
 15. Complete the Pool Member Properties for the first pool member
 
 - Node Type: Existing Node
-- Node: MyAppNode1
-- Port: 80
+- Node: MyAppNode5
+- Port: 80 - HTTP
 
-.. image:: ../pictures/module2/img_module3_lab1_11.png
+.. image:: ../pictures/module2/img_module3_lab1_6.png
   :align: center
   :scale: 50%
 
 16. Click the Save button in the lower right to save the pool member
 
-17. Repeat steps 15 and 16 for the second pool member
+17. Repeat steps 14 and 15 for the second pool member
 
 18. Click the Save & Close button in the lower right to save your pool
 
 19. Now we will create a custom profile for our Virtual Server. Navigate to **LOCAL TRAFFIC > Profiles**
 
-.. image:: ../pictures/module2/img_module3_lab1_12.png
+.. image:: ../pictures/module2/img_module3_lab1_7.png
   :align: center
   :scale: 50%
 
 20. Click the Create button to create our custom profile
 
-.. image:: ../pictures/module2/img_module3_lab1_13.png
-  :align: center
-  :scale: 50%
-
 21. Fill out the Profile Properties
 
 - Name: Source_Addr_Timeout_75
-- Type: Persistence Source Address Affinity
-- Parent Profile: Source_addr
-- Timeout: Specify 75 Seconds
+- Type: Persistence Source Address
+- Parent Profile: source_addr
+- Timeout: Specify 75 seconds
 
-.. image:: ../pictures/module2/img_module3_lab1_14.png
+.. image:: ../pictures/module2/img_module3_lab1_8.png
   :align: center
   :scale: 50%
 
@@ -125,24 +105,20 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 23. Now we will create our Virtual Server. Navigate to **LOCAL TRAFFIC > Virtual Servers**
 
-.. image:: ../pictures/module2/img_module3_lab1_15.png
+.. image:: ../pictures/module2/img_module3_lab1_9.png
   :align: center
   :scale: 50%
 
 24. Click the Create button to create the Virtual Server
 
-.. image:: ../pictures/module2/img_module3_lab1_16.png
-  :align: center
-  :scale: 50%
-
 25. Fill out the Virtual Server Properties
 
-- Name: MyAppVS
-- Device: SEA-vBIGIP01.termmarc.com
-- Destination Address: 10.1.10.200
+- Name: MyAppVS5
+- Device: BOS-vBIGIP01.termmarc.com
+- Destination Address: 10.1.10.210
 - Service Port 8088
 
-.. image:: ../pictures/module2/img_module3_lab1_17.png
+.. image:: ../pictures/module2/img_module3_lab1_10.png
   :align: center
   :scale: 50%
 
@@ -153,7 +129,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 Leave all other options at their default settings
 
-.. image:: ../pictures/module2/img_module3_lab1_18.png
+.. image:: ../pictures/module2/img_module3_lab1_11.png
   :align: center
   :scale: 50%
 
