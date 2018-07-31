@@ -1,4 +1,4 @@
-Lab 2.5: Create iRule and attach to multiple VS
+Lab 3.2: Create iRule and attach to multiple VS
 -----------------------------------------------
 
 BIG-IQ allows users to create iRules and use them on the virtual servers that are managed by BIG-IQ. The iRules can be attached to individual virtual servers or iRules can be attached to multiple virtual servers in the same operation.
@@ -12,13 +12,13 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
 
 3. Select **LOCAL TRAFFIC > iRules**
 
-.. image:: ../pictures/module2/img_module2_lab5_1.png
+.. image:: ../pictures/module2/img_module3_lab2_1.png
   :align: center
   :scale: 50%
 
 4. Click the Create button under iRules
 
-.. image:: ../pictures/module2/img_module2_lab5_2.png
+.. image:: ../pictures/module2/img_module3_lab2_2.png
   :align: center
   :scale: 50%
 
@@ -28,31 +28,31 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
 - Partition: Common
 - Body: paste from *https://devcentral.f5.com/codeshare/ltm-maintenance-page-lite*
 
-.. image:: ../pictures/module2/img_module2_lab5_3.png
+.. image:: ../pictures/module2/img_module3_lab2_3.png
   :align: center
   :scale: 50%
 
 6. Navigate to **LOCAL TRAFFIC > Virtual Servers**
 
-.. image:: ../pictures/module2/img_module2_lab5_4.png
+.. image:: ../pictures/module2/img_module3_lab2_4.png
   :align: center
   :scale: 50%
 
 7. Type ITwiki in the filter box on the right hand side of the screen and press return
 
-.. image:: ../pictures/module2/img_module2_lab5_5.png
+.. image:: ../pictures/module2/img_module3_lab2_5.png
   :align: center
   :scale: 50%
 
 8. Click to select all the matching virtual servers
 
-.. image:: ../pictures/module2/img_module2_lab5_6.png
+.. image:: ../pictures/module2/img_module3_lab2_6.png
   :align: center
   :scale: 50%
 
 9. Click the Attach iRules button at the top of the screen
 
-.. image:: ../pictures/module2/img_module2_lab5_7.png
+.. image:: ../pictures/module2/img_module3_lab2_7.png
   :align: center
   :scale: 50%
 
@@ -60,7 +60,7 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
 
 - iRules: Select the **VS_maintenance_irule** iRule
 
-.. image:: ../pictures/module2/img_module2_lab5_8.png
+.. image:: ../pictures/module2/img_module3_lab2_8.png
   :align: center
   :scale: 50%
 

@@ -1,5 +1,5 @@
-Module 3: Application Deployment via API
-========================================
+Module 3: Create Nodes, VS and deploy settings
+==============================================
 In this module, we will learn how to create nodes, monitors, pools, virtual servers from BIG-IQ.
 BIG-IQ can also be used to create iRules and attach those to one or multiple Virtual Servers.
 You will finally learn how to create evaluation stages from those changes and deploy the changes from BIG-IQ to BIG-IP.

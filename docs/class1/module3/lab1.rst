@@ -1,4 +1,4 @@
-Lab 2.4: ADC/LTM Management Workflow
+Lab 3.1: ADC/LTM Management Workflow
 ------------------------------------
 
 BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, so a user can create and stage a new application direct on the BIG-IQ. BIG-IQ can create some monitors and profiles on BIG-IQ and can associate other profiles and monitors that already exist on the managed BIG-IP.
@@ -7,13 +7,13 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 2. We will build our application starting at the nodes and making our way to the virtual servers. Navigate to **LOCAL TRAFFIC > Nodes**
 
-.. image:: ../pictures/module2/img_module2_lab4_1.png
+.. image:: ../pictures/module2/img_module3_lab1_1.png
   :align: center
   :scale: 50%
 
 3. Click the Create button to create a node
 
-.. image:: ../pictures/module2/img_module2_lab4_3.png
+.. image:: ../pictures/module2/img_module3_lab1_3.png
   :align: center
   :scale: 50%
 
@@ -23,7 +23,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Device: SEA-vBIGIP01.termmarc.com
 - Address: 10.1.10.110
 
-.. image:: ../pictures/module2/img_module2_lab4_4.png
+.. image:: ../pictures/module2/img_module3_lab1_4.png
   :align: center
   :scale: 50%
 
@@ -37,7 +37,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 7. Verify that the MyApp nodes are created by typing MyApp in the filter box in the upper right and pressing return
 
-.. image:: ../pictures/module2/img_module2_lab4_5.png
+.. image:: ../pictures/module2/img_module3_lab1_5.png
   :align: center
   :scale: 50%
 
@@ -47,13 +47,13 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 9. Now we will create a pool with these nodes as pool members. Navigate to **LOCAL TRAFFIC > Pools**
 
-.. image:: ../pictures/module2/img_module2_lab4_6.png
+.. image:: ../pictures/module2/img_module3_lab1_6.png
   :align: center
   :scale: 50%
 
 10. Click the Create button to start creating your pool
 
-.. image:: ../pictures/module2/img_module2_lab4_7.png
+.. image:: ../pictures/module2/img_module3_lab1_7.png
   :align: center
   :scale: 50%
 
@@ -64,7 +64,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Health Monitors: /Common/tcp
 - Load Balancing Method: Round Robin
 
-.. image:: ../pictures/module2/img_module2_lab4_8.png
+.. image:: ../pictures/module2/img_module3_lab1_8.png
   :align: center
   :scale: 50%
 
@@ -72,13 +72,13 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 13. Click on the MyAppPool name in the list of pools to add pool members
 
-.. image:: ../pictures/module2/img_module2_lab4_9.png
+.. image:: ../pictures/module2/img_module3_lab1_9.png
   :align: center
   :scale: 50%
 
 14. Click on the New Member button under Resources to add pool members
 
-.. image:: ../pictures/module2/img_module2_lab4_10.png
+.. image:: ../pictures/module2/img_module3_lab1_10.png
   :align: center
   :scale: 50%
 
@@ -88,7 +88,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Node: MyAppNode1
 - Port: 80
 
-.. image:: ../pictures/module2/img_module2_lab4_11.png
+.. image:: ../pictures/module2/img_module3_lab1_11.png
   :align: center
   :scale: 50%
 
@@ -100,13 +100,13 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 19. Now we will create a custom profile for our Virtual Server. Navigate to **LOCAL TRAFFIC > Profiles**
 
-.. image:: ../pictures/module2/img_module2_lab4_12.png
+.. image:: ../pictures/module2/img_module3_lab1_12.png
   :align: center
   :scale: 50%
 
 20. Click the Create button to create our custom profile
 
-.. image:: ../pictures/module2/img_module2_lab4_13.png
+.. image:: ../pictures/module2/img_module3_lab1_13.png
   :align: center
   :scale: 50%
 
@@ -117,7 +117,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Parent Profile: Source_addr
 - Timeout: Specify 75 Seconds
 
-.. image:: ../pictures/module2/img_module2_lab4_14.png
+.. image:: ../pictures/module2/img_module3_lab1_14.png
   :align: center
   :scale: 50%
 
@@ -125,13 +125,13 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 23. Now we will create our Virtual Server. Navigate to **LOCAL TRAFFIC > Virtual Servers**
 
-.. image:: ../pictures/module2/img_module2_lab4_15.png
+.. image:: ../pictures/module2/img_module3_lab1_15.png
   :align: center
   :scale: 50%
 
 24. Click the Create button to create the Virtual Server
 
-.. image:: ../pictures/module2/img_module2_lab4_16.png
+.. image:: ../pictures/module2/img_module3_lab1_16.png
   :align: center
   :scale: 50%
 
@@ -142,7 +142,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Destination Address: 10.1.10.200
 - Service Port 8088
 
-.. image:: ../pictures/module2/img_module2_lab4_17.png
+.. image:: ../pictures/module2/img_module3_lab1_17.png
   :align: center
   :scale: 50%
 
@@ -153,7 +153,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 Leave all other options at their default settings
 
-.. image:: ../pictures/module2/img_module2_lab4_18.png
+.. image:: ../pictures/module2/img_module3_lab1_18.png
   :align: center
   :scale: 50%
 
