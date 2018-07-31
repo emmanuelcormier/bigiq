@@ -13,11 +13,11 @@ Adding devices to BIG-IQ inventory:
 
 1. The BIG-IP device must be located in your network,
 2. The BIG-IP device must be running a compatible version
+3. Port 22 and 443 must be open to the BIG-IQ management address or any alternative address used to add the BIG-IP device to BIG-IQ Inventory
 
 **BIG-IP Versions**
 
 You can find the BIG-IQ compatibility matrix with BIG-IP releases at: https://support.f5.com/csp/article/K34133507
-
 
 .. toctree::
    :maxdepth: 1
