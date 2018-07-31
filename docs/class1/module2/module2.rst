@@ -16,20 +16,7 @@ Adding devices to BIG-IQ inventory:
 
 **BIG-IP Versions**
 
-  ============================ =============================
-     Functional Description       Minimum BIG-IP Version
-  ============================ =============================
-    Backup / Restore                11.5.0 HF7
-    Upgrade - Legacy devices        10.2.0
-    Upgrade - Managed devices       11.5.0 HF7
-    Licensing BIG-IP VE             11.5.0
-    Licensing - WebSafe             12.0.0
-    ADC Management                  11.5.1 HF4
-    AFM                             11.5.2
-    Access (APM)                    12.1.0
-    ASM/AWAF                        11.5.3 HF1
-    DNS                             12.0.0
-  ============================ =============================
+You can find the BIG-IQ compatibility matrix with BIG-IP releases at: https://support.f5.com/csp/article/K34133507
 
 
 .. toctree::
