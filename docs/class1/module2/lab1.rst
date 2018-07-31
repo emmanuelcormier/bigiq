@@ -12,20 +12,20 @@ Adding a BIG-IP device to the BIG-IQ system inventory is the first step to manag
 - In the **User Name** and **Password** fields, type the user name (admin) and password (admin) for the device
 - Cluster Display Name: Select **None**
 
-.. image:: ../pictures/module2/img_module2_lab2_1.png
+.. image:: ../pictures/module2/img_module2_lab1_1.png
   :align: center
   :scale: 50%
 
 5. Click the Add button to add this device to BIG-IQ
 6. BIG-IQ now exchanges certs with the BIG-IP and pops up a window for the administrator to select which modules to manage from BIG-IQ. For this device, select all services except Fraud Protection Services. Leave the Statistics monitoring boxes all checked, and then click the Continue button
 
-.. image:: ../pictures/module2/img_module2_lab2_2.png
+.. image:: ../pictures/module2/img_module2_lab1_2.png
   :align: center
   :scale: 50%
 
 7. The discovery process will start and you should see a screen like this. At this point, BIG-IQ is using REST calls to the BIG-IP to pull the selected parts of the BIG-IP configuration into BIG- IQ
 
-.. image:: ../pictures/module2/img_module2_lab2_3.png
+.. image:: ../pictures/module2/img_module2_lab1_3.png
   :align: center
   :scale: 50%
 
@@ -33,50 +33,50 @@ Allow the import jobs to complete. At this point, the configuration of the BIG-I
 
 8. On the Device Inventory screen, click the **Complete import tasks** link in the Services column for SEA-vBIGIP01. (you may need to scroll right to see the services column)
 
-.. image:: ../pictures/module2/img_module2_lab2_4.png
+.. image:: ../pictures/module2/img_module2_lab1_4.png
   :align: center
   :scale: 50%
 
 9. In the Local Traffic (LTM) Section, select the check box for “Create a snapshot of the current configuration before importing” and click the Import button
 
-.. image:: ../pictures/module2/img_module2_lab2_5.png
+.. image:: ../pictures/module2/img_module2_lab1_5.png
   :align: center
   :scale: 50%
 
 10. In the Access Policy (APM) Section, select the check box for “Create a snapshot of the current configuration before importing” and click the Import button.
 
-.. image:: ../pictures/module2/img_module2_lab2_6.png
+.. image:: ../pictures/module2/img_module2_lab1_6.png
   :align: center
   :scale: 50%
 
 - BIG-IQ Access has its own notion of device grouping called “Access Groups” where you define a “Source Device” where configuration changes can be made and deployed to the other devices in the Access Group. Create a new Access Group by choosing **Create New** from the Access Group drop-down. Then name the new group **SeattleAG**, and Click the **Add** button to continue
 
-.. image:: ../pictures/module2/img_module2_lab2_7.png
+.. image:: ../pictures/module2/img_module2_lab1_7.png
   :align: center
   :scale: 50%
 
 11. In the Application Security (ASM) Section, select the check box for “Create a snapshot of the current configuration before importing” and click the Import button
 
-.. image:: ../pictures/module2/img_module2_lab2_8.png
+.. image:: ../pictures/module2/img_module2_lab1_8.png
   :align: center
   :scale: 50%
 
 - In step 11, you will experience “Conflict Resolution.” A conflict is when an object that is already in the BIG-IQ working config has the same name, but different contents as an object that exists on the BIG-IP that is being imported. The user must select whether to keep the object from BIG-IP or BIG-IQ configuration. Storage will be updated accordingly. Review the differences that have been discovered as part of this import by clicking on each row in the difference view
 
-.. image:: ../pictures/module2/img_module2_lab2_9.png
+.. image:: ../pictures/module2/img_module2_lab1_9.png
   :align: center
   :scale: 50%
 
 - In this lab, we are going to choose to keep the version of the object that is already in the BIG-IQ. Click the continue button
 - A window reminds us that these conflict resolution selections will not modify the configuration that is running on this BIG-IP until we deploy changes from BIG-IQ. Click the Resolve button to continue
 
-.. image:: ../pictures/module2/img_module2_lab2_10.png
+.. image:: ../pictures/module2/img_module2_lab1_10.png
   :align: center
   :scale: 50%
 
 12. In the Advanced Firewall (AFM) Section, select the check box for “Create a snapshot of the current configuration before importing” and click the Import button
 
-.. image:: ../pictures/module2/img_module2_lab2_11.png
+.. image:: ../pictures/module2/img_module2_lab1_11.png
   :align: center
   :scale: 50%
 
@@ -84,19 +84,19 @@ Allow the import jobs to complete. At this point, the configuration of the BIG-I
 
 13. In the BIG-IP (DNS) Section, click the Import button
 
-.. image:: ../pictures/module2/img_module2_lab2_12.png
+.. image:: ../pictures/module2/img_module2_lab1_12.png
   :align: center
   :scale: 50%
 
 14. Click the back arrow button at the top of the section to return to the inventory
 
-.. image:: ../pictures/module2/img_module2_lab2_13.png
+.. image:: ../pictures/module2/img_module2_lab1_13.png
   :align: center
   :scale: 50%
 
 15. Click on the SEA-vBIGIP01.termmarc.com device link to review the device Properties, Health, and Services information for the device
 
-.. image:: ../pictures/module2/img_module2_lab2_14.png
+.. image:: ../pictures/module2/img_module2_lab1_14.png
   :align: center
   :scale: 50%
 
@@ -104,7 +104,7 @@ Allow the import jobs to complete. At this point, the configuration of the BIG-I
 
 17. Click the arrow in the upper left of the Services panel to return to the device inventory screen
 
-.. image:: ../pictures/module2/img_module2_lab2_15.png
+.. image:: ../pictures/module2/img_module2_lab1_15.png
   :align: center
   :scale: 50%
 
