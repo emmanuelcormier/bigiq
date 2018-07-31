@@ -7,7 +7,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 2. We will build our application starting at the nodes and making our way to the virtual servers. Navigate to **LOCAL TRAFFIC > Nodes**
 
-.. image:: ../pictures/module2/img_module3_lab1_1.png
+.. image:: ../pictures/module3/img_module3_lab1_1.png
   :align: center
   :scale: 50%
 
@@ -19,7 +19,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Device: BOS-vBIGIP01.termmarc.com
 - Address: 10.1.10.120
 
-.. image:: ../pictures/module2/img_module3_lab1_2.png
+.. image:: ../pictures/module3/img_module3_lab1_2.png
   :align: center
   :scale: 50%
 
@@ -35,7 +35,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 8. You should now see an entry for each of the MyApp nodes on both BOS BIG-IPs.
 
-.. image:: ../pictures/module2/img_module3_lab1_3.png
+.. image:: ../pictures/module3/img_module3_lab1_3.png
   :align: center
   :scale: 50%
 
@@ -43,7 +43,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 9. Now we will create a pool with these nodes as pool members. Navigate to **LOCAL TRAFFIC > Pools**
 
-.. image:: ../pictures/module2/img_module3_lab1_4.png
+.. image:: ../pictures/module3/img_module3_lab1_4.png
   :align: center
   :scale: 50%
 
@@ -56,7 +56,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Health Monitors: /Common/tcp
 - Load Balancing Method: Round Robin
 
-.. image:: ../pictures/module2/img_module3_lab1_5.png
+.. image:: ../pictures/module3/img_module3_lab1_5.png
   :align: center
   :scale: 50%
 
@@ -72,7 +72,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Node: MyAppNode5
 - Port: 80 - HTTP
 
-.. image:: ../pictures/module2/img_module3_lab1_6.png
+.. image:: ../pictures/module3/img_module3_lab1_6.png
   :align: center
   :scale: 50%
 
@@ -84,7 +84,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 19. Now we will create a custom profile for our Virtual Server. Navigate to **LOCAL TRAFFIC > Profiles**
 
-.. image:: ../pictures/module2/img_module3_lab1_7.png
+.. image:: ../pictures/module3/img_module3_lab1_7.png
   :align: center
   :scale: 50%
 
@@ -97,7 +97,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Parent Profile: source_addr
 - Timeout: Specify 75 seconds
 
-.. image:: ../pictures/module2/img_module3_lab1_8.png
+.. image:: ../pictures/module3/img_module3_lab1_8.png
   :align: center
   :scale: 50%
 
@@ -105,7 +105,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 23. Now we will create our Virtual Server. Navigate to **LOCAL TRAFFIC > Virtual Servers**
 
-.. image:: ../pictures/module2/img_module3_lab1_9.png
+.. image:: ../pictures/module3/img_module3_lab1_9.png
   :align: center
   :scale: 50%
 
@@ -118,7 +118,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Destination Address: 10.1.10.210
 - Service Port 8088
 
-.. image:: ../pictures/module2/img_module3_lab1_10.png
+.. image:: ../pictures/module3/img_module3_lab1_10.png
   :align: center
   :scale: 50%
 
@@ -129,7 +129,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 Leave all other options at their default settings
 
-.. image:: ../pictures/module2/img_module3_lab1_11.png
+.. image:: ../pictures/module3/img_module3_lab1_11.png
   :align: center
   :scale: 50%
 
