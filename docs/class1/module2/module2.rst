@@ -16,9 +16,9 @@ Adding devices to BIG-IQ inventory:
 
 **BIG-IP Versions**
 
-============================ =============================
-    Functional Description       Minimum BIG-IP Version
-============================ =============================
+  ============================ =============================
+     Functional Description       Minimum BIG-IP Version
+  ============================ =============================
     Backup / Restore                11.5.0 HF7
     Upgrade - Legacy devices        10.2.0
     Upgrade - Managed devices       11.5.0 HF7
@@ -29,7 +29,7 @@ Adding devices to BIG-IQ inventory:
     Access (APM)                    12.1.0
     ASM/AWAF                        11.5.3 HF1
     DNS                             12.0.0
-============================ =============================
+  ============================ =============================
 
 
 .. toctree::
