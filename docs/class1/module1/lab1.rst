@@ -23,19 +23,14 @@ Log in to the BIG-IQ Console Node (10.1.1.4 admin/admin)
   :align: center
   :scale: 50%
 
-- DCD item in UI displayed.
+- DCD item in UI displayed:
 
--- Status – State indicator: Green(UP)|Yellow(Unhealthy)|Red(Down)
-
--- Device name – Hostname of DCD (data collection device)
-
--- IP Address – IP Address of interface used for data collection
-
--- Version – Software version of BIG-IQ DCD (data collection device)
-
+- Status - State indicator: Green(UP)|Yellow(Unhealthy)|Red(Down)
+- Device name – Hostname of DCD (data collection device)
+- IP Address – IP Address of interface used for data collection
+- Version – Software version of BIG-IQ DCD (data collection device)
 - Add Services to the new DCD Device by clicking the Add Services link under the services column
-
--- Activate the Access, FPS, and Web Application Security stats. Make sure the Service Status is Active (each click may take a minute to register)
+- Activate the Access, FPS, and Web Application Security stats. Make sure the Service Status is Active (each click may take a minute to register)
 
 
 *Turn on statistics collection for existing devices*
