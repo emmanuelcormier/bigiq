@@ -1,97 +1,29 @@
-Lab 2.2: Create custom security policies & Application Service Template
------------------------------------------------------------------------
-Connect as **larry**
+Lab 2.2: Automating device backup and archiving a copy of the backup file
+-------------------------------------------------------------------------
 
-1. Create the custom ASM policy, go to *Configuration* > *SECURITY* > *Web Application Security* > *policies*.
+BIG-IQ provides the ability to backup individual or groups of managed devices on an ad-hoc or a scheduled basis. The admin can decide how long to retain the backups on BIG-IQ and has the option of archiving a copy of the UCS backup off to an external device for DR or deeper storage purposes.
+In this scenario, we are going to schedule a nightly backup that archives a copy off to our archive for DR purposes.
+
+1. Click on the **Back Up & Restore** on the left-hand menu
+2. Click on Backup Schedules
 
 .. image:: ../pictures/module2/img_module2_lab2_1.png
   :align: center
   :scale: 50%
 
-|
+3. Click the **Create** button in the main pane
+4. Fill out the Backup Schedule
 
-Select the ``f5-asm-policy1`` ASM policy from the list and look through its settings. Notice the policy is in Transparent mode.
+- Name: SeattleNightly
+- Local Retention Policy: Delete local backup copy 3 days after creation Backup Frequency: Daily
+- Start Time 00:00 Eastern Standard Time
+- Under Devices, select the device radio button
+- Select the **SEA-vBIGIP01.termmarc.com**
+- Archive: Store Archive Copy of Backup
+- Location: SCP
+- IP Address: 10.1.10.80
+- User name: f5
+- Password: default
+- Directory: /home/f5
 
-Edit the Policy ``f5-asm-policy1``, switch to ``Manual`` Learning Mode and ``Make available in Application Templates``, click Save.
-
-.. image:: ../pictures/module2/img_module2_lab2_4.png
-  :align: center
-  :scale: 50%
-
-|
-
-In addition, go to *POLICY BUILDING* > *Settings* and set *Policy Building Mode* to ``Central`` and switch to ``Manual`` Learning Mode, click Save & Close.
-
-.. image:: ../pictures/module2/img_module2_lab2_4b.png
-  :align: center
-  :scale: 50%
-
-.. note::
-
-.. note:: The intent for the initial release 6.0 was to be able to push a basic (negative only) security policy that can provide a basic level of protection for most applications. For 6.0, it is recommended that learning shouldn’t be enabled with app templates – it should be a fundamental policy. However, if you want to use learning/blocking mode, you will need a dedicated app template per application.
-
-.. warning:: Ignore the unauthorized error when saving the policy.
-
-2. Create the AFM Policy, go to *Configuration* > *SECURITY* > *Network Security* > *Firewall Policies*, click Create.
-Then enter the name of your policy: ``f5-afm-policy1``. Make sure the box ``Make available in Application Templates`` is checked. Click Save.
-
-.. image:: ../pictures/module2/img_module2_lab2_5.png
-  :align: center
-  :scale: 50%
-
-|
-
-Create 2 Rules:
-
-- rule 1: set the destination ports to ``443`` and ``80``, Protocol to ``tcp``
-- rule 2: set action to ``reject`` and log to ``true``
-
-Click Save & Close.
-
-.. image:: ../pictures/module2/img_module2_lab2_6.png
-  :align: center
-  :scale: 50%
-
-|
-
-Connect as **marco**
-
-1. Create a Clone of the *Default-f5-HTTPS-WAF-lb-template* policy, go to *Applications* > *SERVICE CATALOG*, and click on *Clone*.
-Enter the name of your cloned template: ``f5-HTTPS-WAF-lb-template-custom1``
-
-.. image:: ../pictures/module2/img_module2_lab2_7.png
-  :align: center
-  :scale: 50%
-
-|
-
-2. Then select the ASM policy ``test-asm-policy_1``, the AFM policy ``f5-afm-policy1`` and the Logging Profile ``templates-default`` in the SECURITY POLICIES section on both Virtual Servers (Standalone Device).
-
-.. image:: ../pictures/module2/img_module2_lab2_8.png
-  :align: center
-  :scale: 50%
-
-|
-
-Save & Close
-
-.. image:: ../pictures/module2/img_module2_lab2_9.png
-  :align: center
-  :scale: 50%
-
-|
-
-3. In order to allow Paula to use the custom application template, go to : *System* > *Role Management* > *Roles*
-and select *CUSTOM ROLES* > *Application Roles* > *Application Creator VMware* role (already assigned to Paula). Select the Template *f5-HTTPS-WAF-lb-template-custom1*, drag it to the right.
-
-.. image:: ../pictures/module2/img_module2_lab2_10.png
-    :align: center
-    :scale: 50%
-
-|
-
-Click on *Save & Close*
-
-.. note:: A DoS Profile could also be assign to the template but we are not using it for this lab.
-
-.. warning:: Application DOS is only supported on Standalone device. The Network DOS is supported on Standalone and Tier 1 device (in a context of SSG)
+5. Click **Save & Close** to save the scheduled backup job.
