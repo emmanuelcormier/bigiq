@@ -9,21 +9,28 @@ In this scenario, we will import a standalone BIG-IP device, review the device i
 
 Adding devices to BIG-IQ inventory:
 
-** Dependencies **
+**Dependencies**
 
 1. The BIG-IP device must be located in your network,
 2. The BIG-IP device must be running a compatible version
 
-** BIG-IP Versions **
+**BIG-IP Versions**
 
- ============================ =============================
+============================ =============================
     Functional Description       Minimum BIG-IP Version
- ============================ =============================
+============================ =============================
     Backup / Restore                11.5.0 HF7
     Upgrade - Legacy devices        10.2.0
     Upgrade - Managed devices       11.5.0 HF7
-    Licensing BIG-IP VE             11.5.0 HF7
- ============================ =============================
+    Licensing BIG-IP VE             11.5.0
+    Licensing - WebSafe             12.0.0
+    ADC Management                  11.5.1 HF4
+    AFM                             11.5.2
+    Access (APM)                    12.1.0
+    ASM/AWAF                        11.5.3 HF1
+    DNS                             12.0.0
+============================ =============================
+
 
 .. toctree::
    :maxdepth: 1
