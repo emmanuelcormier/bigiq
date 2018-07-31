@@ -1,26 +1,29 @@
-Module 2: Application Templates & Deployment
-============================================
-In this module, we will learn how to use Application Templates and how to deploy an **Application**.
+Module 2: Importing BIG-IP devices for Management and Inventory
+===============================================================
 
-The Application Templates will be created by **marco**, the Administrator.
-**larry** will create the security policies and let Marco know about the ones to associate with the templates.
-Once the template is ready with all the necessary information, it will be ready to use by the Application owner.
+In this module, we will learn how to import BIG-IP devices in BIG-IQ.
 
-**paula** needs to deploy an application, she has multiple Application servers. At this time, she needs to test
-the performance of her application, she also wants to make her application secure before staging it to production.
-She connects to the BIG-IQ and has access to her Application Dashboard.
-**paula** uses the application template created by Marco to deploy her Application.
+The first step of managing devices with BIG-IQ is device discovery. The basic discovery allows for device inventory, device health monitoring, backup and restore of the managed device, integration with F5’s iHealth service, software upgrade, and device template deployment. As part of the discovery process, you can choose to manage other parts of the BIG-IP configuration.
 
-After a week of testing her application (in the class ~5 min), she will ask **larry** to fine tune and validate
-the learning done by the Application Firewall (BIG-IP ASM).
+In this scenario, we will import a standalone BIG-IP device, review the device information available in BIG-IQ, export our inventory to a CSV file, and review that.
 
-.. note:: A traffic generator located on the *Ubuntu Lamp Server, LDAP and DHCP* server, is sending good traffic every minute to the virtual servers.
+Adding devices to BIG-IQ inventory:
 
-Once the security policy is tuned and validated, **paula** will enforce blocking mode in the policy.
+** Dependencies **
 
-Finally, we will simulate "bad" traffic to show the security policy blocking it.
+1. The BIG-IP device must be located in your network,
+2. The BIG-IP device must be running a compatible version
 
-.. note:: A traffic generator located on the *Ubuntu Lamp Server, LDAP and DHCP* server, can be launched manually to send bad traffic to the virtual servers.
+** BIG-IP Versions **
+
+ ============================ =============================
+    Functional Description       Minimum BIG-IP Version
+ ============================ =============================
+    Backup / Restore                11.5.0 HF7
+    Upgrade - Legacy devices        10.2.0
+    Upgrade - Managed devices       11.5.0 HF7
+    Licensing BIG-IP VE             11.5.0 HF7
+ ============================ =============================
 
 .. toctree::
    :maxdepth: 1
