@@ -24,7 +24,7 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
 - Partition: Common
 - Body: paste from https://devcentral.f5.com/codeshare/ltm-maintenance-page-lite
 
-.. literalinclude: vs_maintenance_irule.tcl
+.. literalinclude:: vs_maintenance_irule.tcl
   :linenos:
   :language: tcl
 
