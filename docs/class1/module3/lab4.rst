@@ -7,13 +7,13 @@ BIG-IQ can be used to remove virtual servers, and other objects that are no long
 
 2. Navigate to **LOCAL TRAFFIC > Virtual Servers**
 
-.. image:: ../pictures/module2/img_module3_lab4_1.png
+.. image:: ../pictures/module3/img_module3_lab4_1.png
   :align: center
   :scale: 50%
 
 3. Select the top HR-CLONE virtual server
 
-.. image:: ../pictures/module2/img_module3_lab4_2.png
+.. image:: ../pictures/module3/img_module3_lab4_2.png
   :align: center
   :scale: 50%
 
@@ -21,7 +21,7 @@ BIG-IQ can be used to remove virtual servers, and other objects that are no long
 
 5. Verify that you want to delete this virtual server from the BIG-IQ configuration
 
-.. image:: ../pictures/module2/img_module3_lab4_3.png
+.. image:: ../pictures/module3/img_module3_lab4_3.png
   :align: center
   :scale: 50%
 
@@ -29,13 +29,13 @@ BIG-IQ can be used to remove virtual servers, and other objects that are no long
 
 7. Navigate to **EVALUATE & DEPLOY > Local Traffic & Network**
 
-.. image:: ../pictures/module2/img_module3_lab4_4.png
+.. image:: ../pictures/module3/img_module3_lab4_4.png
   :align: center
   :scale: 50%
 
 8. Click the Create button under Deployments
 
-  .. image:: ../pictures/module2/img_module3_lab4_5.png
+  .. image:: ../pictures/module3/img_module3_lab4_5.png
     :align: center
     :scale: 50%
 
@@ -47,7 +47,7 @@ BIG-IQ can be used to remove virtual servers, and other objects that are no long
 - Unused Objects: Remove Unused Objects Method: Create Evaluation
 - Target: Group, BostonCluster, both devices selected
 
-.. image:: ../pictures/module2/img_module3_lab4_6.png
+.. image:: ../pictures/module3/img_module3_lab4_6.png
   :align: center
   :scale: 50%
 
@@ -55,13 +55,13 @@ BIG-IQ can be used to remove virtual servers, and other objects that are no long
 
 11. After the evaluation completes, review the differences by clicking the view link under Differences
 
-.. image:: ../pictures/module2/img_module3_lab4_7.png
+.. image:: ../pictures/module3/img_module3_lab4_7.png
   :align: center
   :scale: 50%
 
 12. Review the differences
 
-.. image:: ../pictures/module2/img_module3_lab4_8.png
+.. image:: ../pictures/module3/img_module3_lab4_8.png
   :align: center
   :scale: 50%
 
@@ -69,13 +69,13 @@ BIG-IQ can be used to remove virtual servers, and other objects that are no long
 
 14. Click the Deploy button to push the changes to the BIG-IPs
 
-.. image:: ../pictures/module2/img_module3_lab4_9.png
+.. image:: ../pictures/module3/img_module3_lab4_9.png
   :align: center
   :scale: 50%
 
 15. Verify that you want to deploy the changes to the selected devices
 
-.. image:: ../pictures/module2/img_module3_lab4_10.png
+.. image:: ../pictures/module3/img_module3_lab4_10.png
   :align: center
   :scale: 50%
 

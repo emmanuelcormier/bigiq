@@ -12,7 +12,7 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
 
 3. Select **LOCAL TRAFFIC > iRules**
 
-.. image:: ../pictures/module2/img_module3_lab2_1.png
+.. image:: ../pictures/module3/img_module3_lab2_1.png
   :align: center
   :scale: 50%
 
@@ -52,7 +52,7 @@ when HTTP_REQUEST {
    }
 }
 
-.. image:: ../pictures/module2/img_module3_lab2_2.png
+.. image:: ../pictures/module3/img_module3_lab2_2.png
   :align: center
   :scale: 50%
 
@@ -60,19 +60,19 @@ when HTTP_REQUEST {
 
 7. Type *ITwiki* in the filter box on the right hand side of the screen and press return
 
-.. image:: ../pictures/module2/img_module3_lab2_3.png
+.. image:: ../pictures/module3/img_module3_lab2_3.png
   :align: center
   :scale: 50%
 
 8. Click to select all the matching virtual servers
 
-.. image:: ../pictures/module2/img_module3_lab2_4.png
+.. image:: ../pictures/module3/img_module3_lab2_4.png
   :align: center
   :scale: 50%
 
 9. Click the Attach iRules button at the top of the screen
 
-.. image:: ../pictures/module2/img_module3_lab2_5.png
+.. image:: ../pictures/module3/img_module3_lab2_5.png
   :align: center
   :scale: 50%
 
@@ -80,7 +80,7 @@ when HTTP_REQUEST {
 
 - iRules: Select the **VS_maintenance_irule** iRule
 
-.. image:: ../pictures/module2/img_module3_lab2_6.png
+.. image:: ../pictures/module3/img_module3_lab2_6.png
   :align: center
   :scale: 50%
 

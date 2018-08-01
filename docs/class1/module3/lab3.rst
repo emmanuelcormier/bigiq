@@ -7,7 +7,7 @@ Now that we have staged a number of changes on the BIG-IQ, we will evaluate the 
 
 2. Navigate to **EVALUATE & DEPLOY > Local Traffic & Network**
 
-.. image:: ../pictures/module2/img_module3_lab3_1.png
+.. image:: ../pictures/module3/img_module3_lab3_1.png
   :align: center
   :scale: 50%
 
@@ -21,7 +21,7 @@ Now that we have staged a number of changes on the BIG-IQ, we will evaluate the 
 - Unused Objects: Removed Unused Objects
 - Target: Select Group “All ADC Devices” and move all devices to Selected
 
-.. image:: ../pictures/module2/img_module3_lab3_2.png
+.. image:: ../pictures/module3/img_module3_lab3_2.png
   :align: center
   :scale: 50%
 
@@ -29,19 +29,19 @@ Now that we have staged a number of changes on the BIG-IQ, we will evaluate the 
 
 6. After the evaluation completes, click the View link under Differences to review the changes that will be deployed
 
-.. image:: ../pictures/module2/img_module3_lab3_3.png
+.. image:: ../pictures/module3/img_module3_lab3_3.png
   :align: center
   :scale: 50%
 
 7. Review the staged changes for each device. Change devices with the selector in the upper left
 
-.. image:: ../pictures/module2/img_module3_lab3_4.png
+.. image:: ../pictures/module3/img_module3_lab3_4.png
   :align: center
   :scale: 50%
 
 Click on each change to review the differences
 
-.. image:: ../pictures/module2/img_module3_lab3_5.png
+.. image:: ../pictures/module3/img_module3_lab3_5.png
   :align: center
   :scale: 50%
 
@@ -49,31 +49,31 @@ Click on each change to review the differences
 
 9. Click on the name of the Evaluation to review the options available there
 
-.. image:: ../pictures/module2/img_module3_lab3_6.png
+.. image:: ../pictures/module3/img_module3_lab3_6.png
   :align: center
   :scale: 50%
 
 10. You can review the changes to be deployed on a device by device basis and you can choose to exclude a device from the deployment at this point. At the bottom of the page, you can schedule the deployment for a later time, or you can Deploy Now. Click the Deploy Now button to push the changes to the BIG-IPs.
 
-.. image:: ../pictures/module2/img_module3_lab3_7.png
+.. image:: ../pictures/module3/img_module3_lab3_7.png
   :align: center
   :scale: 50%
 
 11. Click the Deploy button
 
-.. image:: ../pictures/module2/img_module3_lab3_8.png
+.. image:: ../pictures/module3/img_module3_lab3_8.png
   :align: center
   :scale: 50%
 
 12. At the bottom of the screen, you can review that your changes are being deployed
 
-.. image:: ../pictures/module2/img_module3_lab3_9.png
+.. image:: ../pictures/module3/img_module3_lab3_9.png
   :align: center
   :scale: 50%
 
 13. Click on the name of the Deployment to review what was deployed
 
-.. image:: ../pictures/module2/img_module3_lab3_10.png
+.. image:: ../pictures/module3/img_module3_lab3_10.png
   :align: center
   :scale: 50%
 
