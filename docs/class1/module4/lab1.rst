@@ -15,7 +15,7 @@ This workflow demonstrates the pool based licensing capabilities:
 1. First, we must generate some registration keys for use in this workflow
 
 In order to same time, we already generated those keys for you :)
-You will find the licenses in **NEED TO CHECK LICENSES***
+You will find the licenses in **NEED TO CHECK LICENSES**
 
 2. Navigate to **LICENSE MANAGEMENT > Licenses** under the Device tab. (Represents device operations)
 

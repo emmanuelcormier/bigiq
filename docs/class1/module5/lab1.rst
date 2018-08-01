@@ -13,7 +13,7 @@ Lab 5.1: Create and deploy centralized Application Security policies
   :align: center
   :scale: 50%
 
-4. Click on CPB_Policy policy to open its parameters
+4. Click on *templates-default* policy to open its parameters
 
 - Expand the Policy Building tab and click on settings. Note the defaults
 
@@ -21,34 +21,25 @@ Lab 5.1: Create and deploy centralized Application Security policies
   :align: center
   :scale: 50%
 
-5. Change the Policy Building Mode to Central. Accept the default value Auto-Select for the Policy Building Device and choose save.
-Note which device is selected.
+- Note that *Policy Building Mode* is defined to *Central*, it means that BIG-IP will send all the suggestions done by policy builder to BIG-IQ through BIG-IQ DCD component (Policy Building Device entry)
+
+5. Log in to the BIG-IP SEA-vBIGIP01 (TMUI) with username (admin) and password (admin)
+
+6. Expand the security tab and choose *Application Security -> Policy Building -> Traffic Learning*
+
+- Note the status of Traffic Learning for *templates-default*
 
 .. image:: ../pictures/module5/img_module5_lab1_3.png
   :align: center
   :scale: 50%
 
-.. image:: ../pictures/module5/img_module5_lab1_4.png
-  :align: center
-  :scale: 50%
-
-6. Log in to the BIG-IP 10.1.1.8 (TMUI) with your username (admin) and password (admin)
-
-7. Expand the security tab and choose *Application Security -> Policy Building -> Traffic Learning*
-
-- Note the status of Traffic Learning for CPB_Policy
-
-.. image:: ../pictures/module5/img_module5_lab1_5.png
-  :align: center
-  :scale: 50%
-
 8. Return to the BIG-IQ UI and navigate to Policy Building Suggestions
 
-- Look for a learned file entity similar to hkr below
-- Click on its associated Add File Type action
+- Look for a learned entity similar to *Unparsed PHP directive* below
+- Click on its associated *Add signature*
 - This will bring up a detailed suggestion menu. Choose Accept and Stage and confirm
 
-.. image:: ../pictures/module5/img_module5_lab1_6.png
+.. image:: ../pictures/module5/img_module5_lab1_4.png
   :align: center
   :scale: 50%
 
