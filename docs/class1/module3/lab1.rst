@@ -117,6 +117,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Device: BOS-vBIGIP01.termmarc.com
 - Destination Address: 10.1.10.210
 - Service Port 8088
+- HTTP Profile: http
 
 .. image:: ../pictures/module3/img_module3_lab1_10.png
   :align: center
