@@ -53,36 +53,30 @@ BIG-IQ can be used to remove virtual servers, and other objects that are no long
 
 10. Click the create button in the lower right
 
-.. image:: ../pictures/module2/img_module3_lab4_7.png
-  :align: center
-  :scale: 50%
-
 11. After the evaluation completes, review the differences by clicking the view link under Differences
 
-.. image:: ../pictures/module2/img_module3_lab4_8.png
+.. image:: ../pictures/module2/img_module3_lab4_7.png
   :align: center
   :scale: 50%
 
 12. Review the differences
 
-.. image:: ../pictures/module2/img_module3_lab4_9.png
+.. image:: ../pictures/module2/img_module3_lab4_8.png
   :align: center
   :scale: 50%
 
 13. After you have reviewed all of the changes, click the Cancel button in the lower right
 
-.. image:: ../pictures/module2/img_module3_lab4_10.png
-  :align: center
-  :scale: 50%
-
 14. Click the Deploy button to push the changes to the BIG-IPs
 
-.. image:: ../pictures/module2/img_module3_lab4_11.png
+.. image:: ../pictures/module2/img_module3_lab4_9.png
   :align: center
   :scale: 50%
 
 15. Verify that you want to deploy the changes to the selected devices
 
-.. image:: ../pictures/module2/img_module3_lab4_12.png
+.. image:: ../pictures/module2/img_module3_lab4_10.png
   :align: center
   :scale: 50%
+
+Once complete, you can connect to any of the BOS BIG-IP device and check that *HR-CLONE* virtual server has been deleted.

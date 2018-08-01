@@ -18,41 +18,61 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
 
 4. Click the Create button under iRules
 
-.. image:: ../pictures/module2/img_module3_lab2_2.png
-  :align: center
-  :scale: 50%
-
 5. Fill out the iRule Properties page
 
 - Name: VS_maintenance_irule
 - Partition: Common
-- Body: paste from *https://devcentral.f5.com/codeshare/ltm-maintenance-page-lite*
+- Body: paste from https://devcentral.f5.com/codeshare/ltm-maintenance-page-lite
 
-.. image:: ../pictures/module2/img_module3_lab2_3.png
+::
+
+when HTTP_REQUEST {
+   # sets the timer to return client to host URL
+   set stime 10
+   # Use the Host header value for the responses if it's set.  If not, use the VIP address.
+   if {[string length [HTTP::host]]}{
+      set host [HTTP::host]
+   } else {
+      set host [IP::local_addr]
+   }
+   # Check if the URI is /maintenance
+   switch [HTTP::uri] {
+      "/maintenance" {
+         # Send an HTTP 200 response with a Javascript meta-refresh pointing to the host using a refresh time
+         HTTP::respond 200 content \
+"<html><head><title>Maintenance page</title></head><body><meta http-equiv='REFRESH' content=$stime;url=http://$host></HEAD>\
+<p><h2>Sorry! This site is down for maintenance.</h2></p></body></html>" "Content-Type" "text/html"
+         return
+      }
+   }
+   # If the pool_testLB is down, redirect to the maintenance page
+   if { [active_members pool_testLB] < 1 } {
+      HTTP::redirect "http://$host/maintenance"
+      return
+   }
+}
+
+.. image:: ../pictures/module2/img_module3_lab2_2.png
   :align: center
   :scale: 50%
 
 6. Navigate to **LOCAL TRAFFIC > Virtual Servers**
 
-.. image:: ../pictures/module2/img_module3_lab2_4.png
-  :align: center
-  :scale: 50%
+7. Type *ITwiki* in the filter box on the right hand side of the screen and press return
 
-7. Type ITwiki in the filter box on the right hand side of the screen and press return
-
-.. image:: ../pictures/module2/img_module3_lab2_5.png
+.. image:: ../pictures/module2/img_module3_lab2_3.png
   :align: center
   :scale: 50%
 
 8. Click to select all the matching virtual servers
 
-.. image:: ../pictures/module2/img_module3_lab2_6.png
+.. image:: ../pictures/module2/img_module3_lab2_4.png
   :align: center
   :scale: 50%
 
 9. Click the Attach iRules button at the top of the screen
 
-.. image:: ../pictures/module2/img_module3_lab2_7.png
+.. image:: ../pictures/module2/img_module3_lab2_5.png
   :align: center
   :scale: 50%
 
@@ -60,10 +80,8 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
 
 - iRules: Select the **VS_maintenance_irule** iRule
 
-.. image:: ../pictures/module2/img_module3_lab2_8.png
+.. image:: ../pictures/module2/img_module3_lab2_6.png
   :align: center
   :scale: 50%
 
 11. Click Save & Close in the lower right
-
-12. Click the Save & Close button in the lower right
