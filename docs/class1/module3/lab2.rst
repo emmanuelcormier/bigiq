@@ -26,7 +26,7 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
 
 .. literalinclude:: vs_maintenance_irule.tcl
   :linenos:
-  :language: tcl
+  :language: bash
 
 .. image:: ../pictures/module3/img_module3_lab2_2.png
   :align: center
