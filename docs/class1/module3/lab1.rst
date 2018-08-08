@@ -136,4 +136,4 @@ Leave all other options at their default settings
 
 27. Click Save & Close in the lower right
 
-28. We now have staged our application and we will deploy it in a later workflow
+28. We now have staged our application and we will deploy it in a later workflow and assign an AWAF/ASM policy on it
