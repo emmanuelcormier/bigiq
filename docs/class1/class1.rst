@@ -5,45 +5,13 @@ Class 1: BIG-IQ Device Management
 
 In this class, we will review how to:
 
-- **add BIG-IQ DCD** (Data Collection Device) for statistical analysis,
-- **import and manage BIG-IP devices**
-
-Below Virtual Servers and Pool Members can be used in the context of the lab for this class.
+- **Add BIG-IQ DCD** (Data Collection Device) for statistical analysis,
+- **Import and manage BIG-IP devices**
+- **Create nodes, pool, VS and deploy settings**
+- **Manage licenses from BIG-IQ**
+- **Central management of ASM/AWAF policies**
 
 .. warning:: After starting the blueprint, connect to the BIG-IP Cluster BOS-vBIGIP01.termmarc.com and BOS-vBIGIP02.termmarc.com, make sure the cluster shows **In Sync**.
-
-- **vLab Test Web Site 16:** *(used in module 4)*
-
-==================  ============ ======== ============================ =======
-Test Website         VIP         Ports    Servers                      Ports
-==================  ============ ======== ============================ =======
-site16.example.com   10.1.10.116 443/80   10.1.20.116 and 10.1.20.117  80/8081
-==================  ============ ======== ============================ =======
-
-- **vLab Test Web Site 18:** *(used in module 2)*
-
-==================  ============ ======== ============================ =======
-Test Website         VIP         Ports    Servers                      Port
-==================  ============ ======== ============================ =======
-site18.example.com   10.1.10.118 443/80   10.1.20.118 and 10.1.20.119  80/8081
-==================  ============ ======== ============================ =======
-
-- **vLab Test Web Site 20:** *(used in module 3)*
-
-==================  ============ ======== ============================ =======
-Test Website         VIP         Ports    Servers                      Ports
-==================  ============ ======== ============================ =======
-site20.example.com   10.1.10.120 443/80   10.1.20.120 and 10.1.20.121  80/8081
-==================  ============ ======== ============================ =======
-
-- **vLab Test Web Site 22:** *(used in module 3)*
-
-==================  ============ ======== ============================ =======
-Test Website         VIP         Port     Server                       Ports
-==================  ============ ======== ============================ =======
-site22.example.com   10.1.10.122 80       10.1.20.122                  80/8081
-==================  ============ ======== ============================ =======
-
 
 .. toctree::
    :maxdepth: 1
