@@ -17,7 +17,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 - Name: MyAppNode5
 - Device: BOS-vBIGIP01.termmarc.com
-- Address: 10.1.10.120
+- Address: 10.1.20.130
 
 .. image:: ../pictures/module3/img_module3_lab1_2.png
   :align: center
@@ -29,7 +29,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 - Name: MyAppNode6
 - Device: BOS-vBIGIP01.termmarc.com
-- Address: 10.1.10.121
+- Address: 10.1.20.131
 
 7. Verify that the MyApp nodes are created by typing MyApp in the filter box in the upper right and pressing return
 
@@ -116,7 +116,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 - Name: MyAppVS5
 - Device: BOS-vBIGIP01.termmarc.com
 - Destination Address: 10.1.10.210
-- Service Port 8088
+- Service Port 80 - HTTP
 - HTTP Profile: http
 
 .. image:: ../pictures/module3/img_module3_lab1_10.png
@@ -125,7 +125,7 @@ BIG-IQ is able to create nodes, monitors, pools, profiles, and virtual servers, 
 
 26. Scroll down and fill out the Resources
 
-- Default Pool: MyAppPool
+- Default Pool: MyAppPool5
 - Default Persistence Profile: Source_Addr_Timeout_75
 
 Leave all other options at their default settings

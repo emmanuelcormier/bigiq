@@ -37,9 +37,6 @@ You will find the licenses in **NEED TO CHECK LICENSES**
 
 5. Click Activate in the lower right
 
-**For Ravello, you will need to select Manual, Generate Dosssier and get the license from https://activate.f5.com/license/dossier.jsp**
-**NEED TO CHECK**
-
 6. Click Accept in the lower right to accept the EULA
 
 7. Repeat steps 6-8 for the Volume license pool (VLS)
@@ -74,11 +71,7 @@ You will find the licenses in **NEED TO CHECK LICENSES**
 
 .. note:: Utility pools activate offerings, just like the Volume pools, so the same holds true that the pool will not be active until the offerings are activated
 
-11. Now, we will create a new pool to hold our AFM standalone keys. Click the New RegKey Pool button
-
-.. image:: ../pictures/module4/img_module4_lab1_9.png
-  :align: center
-  :scale: 50%
+11. Now, we will create a new pool to hold our LTM standalone keys. Click the New RegKey Pool button
 
 12. Fill out the pool properties
 
@@ -86,15 +79,11 @@ You will find the licenses in **NEED TO CHECK LICENSES**
   :align: center
   :scale: 50%
 
-13. Click the Add RegKey button to add your first AFM standalone key
+13. Click the Add RegKey button to add your first LTM standalone key
+
+14. Add the first LTM key to the pool
 
 .. image:: ../pictures/module4/img_module4_lab1_11.png
-  :align: center
-  :scale: 50%
-
-14. Add the first AFM key to the pool
-
-.. image:: ../pictures/module4/img_module4_lab1_12.png
   :align: center
   :scale: 50%
 
@@ -102,7 +91,7 @@ You will find the licenses in **NEED TO CHECK LICENSES**
 
 16. Click Accept in the lower right to accept the EULA
 
-17. Repeat step 14-16 for your second AFM regkey
+17. Repeat step 14-16 for your second LTM regkey
 
 18. Click Save button in the lower right to save your pool
 
@@ -114,7 +103,7 @@ You will find the licenses in **NEED TO CHECK LICENSES**
 
 20. Now that we have all these different key types available in BIG-IQ, we will use BIG-IQ to push a license to a device
 
-21. We will start by granting one of our AFM standalone keys. Click on the name of the pool
+21. We will start by granting one of our LTM standalone keys. Click on the name of the pool
 
 .. image::  ../pictures/module4/img_module4_lab1_14.png
     :align: center
@@ -128,12 +117,10 @@ You will find the licenses in **NEED TO CHECK LICENSES**
 
 23. You can assign the licenses to managed devices or unmanaged devices from BIG-IQ
 
-For this lab, you should avoid giving licenses to BIG-IP01 or BIG-IP02 until after you have completed the other workflows.
-If you want to test managed device licensing, you can use BIG-IP03, but the lab guide will use BIG-IP04 and unmanaged licensing.
+For this lab, we will use PAR-vBIGIP01 as an unmanaged device.
 
-Select Unmanaged Device
-
-- IP Address: 10.1.1.9
+- Select *Unmanaged Device*
+- IP Address: 10.1.1.15
 - Username: admin
 - Password: admin
 
@@ -172,7 +159,7 @@ Select Unmanaged Device
 - Username: admin (NOTE: this is not required if the device is managed by BIG-IQ)
 - Password: admin (NOTE: this is not required if the device is managed by BIG-IQ)
 - License Type: Utility
-- Name: UtilityLicensePool
+- Name: byol-pool-utility
 - Offering: F5-BIG-MSP-BT-1G-LIC-DEV
 - Unit of Measure: Monthly
 
@@ -196,17 +183,13 @@ Select Unmanaged Device
 
 33. Now we can create a report that shows our license usage. Click the Report button below Assignments
 
-.. image::  ../pictures/module4/img_module4_lab1_24.png
-    :align: center
-    :scale: 50%
-
 34. We will generate a Historical Report that shows the license assignments that we have done today.
 
 - Select Type: Historical Report
 - Licenses: All License Types (Move all license pools from available to Selected
 - Usage period: Leave Starting Date and Ending Date as today’s date
 
-.. image::  ../pictures/module4/img_module4_lab1_25.png
+.. image::  ../pictures/module4/img_module4_lab1_24.png
     :align: center
     :scale: 50%
 
@@ -214,19 +197,11 @@ Select Unmanaged Device
 
 36. If your browser raises a question about downloading multiple files, click Allow
 
-.. image::  ../pictures/module4/img_module4_lab1_26.png
-    :align: center
-    :scale: 50%
-
 37. Review the CSV files that are downloaded
 
 38. Return to the Licenses screen
 
-.. image::  ../pictures/module4/img_module4_lab1_27.png
-    :align: center
-    :scale: 50%
-
-39. Click on the AFM Standalone pool
+39. Click on the LTM Standalone pool
 
 .. image::  ../pictures/module4/img_module4_lab1_28.png
     :align: center
