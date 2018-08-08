@@ -16,17 +16,21 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
   :align: center
   :scale: 50%
 
-4. Click the Create button under iRules
+|
+
+4. Click the *Create* button under iRules
 
 5. Fill out the iRule Properties page
 
-- Name: VS_maintenance_irule
-- Partition: Common
-- Body: paste from https://devcentral.f5.com/codeshare/ltm-maintenance-page-lite
+- Name: *VS_maintenance_irule*
+- Partition: *Common*
+- Body: paste from *https://devcentral.f5.com/codeshare/ltm-maintenance-page-lite*
 
 .. image:: ../pictures/module3/img_module3_lab2_2.png
   :align: center
   :scale: 50%
+
+|
 
 6. Navigate to **LOCAL TRAFFIC > Virtual Servers**
 
@@ -36,17 +40,23 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
   :align: center
   :scale: 50%
 
+|
+
 8. Click to select all the matching virtual servers
 
 .. image:: ../pictures/module3/img_module3_lab2_4.png
   :align: center
   :scale: 50%
 
-9. Click the Attach iRules button at the top of the screen
+|
+
+9. Click the *Attach iRules* button at the top of the screen
 
 .. image:: ../pictures/module3/img_module3_lab2_5.png
   :align: center
   :scale: 50%
+
+|
 
 10. Fill out the Attach iRules section
 
@@ -56,4 +66,6 @@ To save time the *VS_maintenance_irule* has already been created on the BIG-IQ.
   :align: center
   :scale: 50%
 
-11. Click Save & Close in the lower right
+|
+
+11. Click *Save & Close* in the lower right

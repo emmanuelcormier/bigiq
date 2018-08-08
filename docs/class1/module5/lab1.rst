@@ -13,17 +13,23 @@ Lab 5.1: Create and deploy centralized Application Security policies
   :align: center
   :scale: 50%
 
+|
+
 4. Select the policy named "templates-default" and click on "More / Clone".
 
 .. image:: ../pictures/module5/img_module5_lab1_2.png
   :align: center
   :scale: 50%
 
+|
+
 - Name the new policy "CPB_Policy"
 
 .. image:: ../pictures/module5/img_module5_lab1_3.png
   :align: center
   :scale: 50%
+
+|
 
 5. Click on *CPB_Policy* policy to open its parameters
 
@@ -35,6 +41,8 @@ Lab 5.1: Create and deploy centralized Application Security policies
   :align: center
   :scale: 50%
 
+|
+
 6. Now we will assign that new policy to the previously created Virtual Server.
 
 - Go to **SECURITY -> Web Application Security / Virtual Servers** and filter search by "MyAppVS"
@@ -42,6 +50,8 @@ Lab 5.1: Create and deploy centralized Application Security policies
 .. image:: ../pictures/module5/img_module5_lab1_5.png
   :align: center
   :scale: 50%
+
+|
 
 - Click on *MyAppVS5* from *BOS-vBIGIP01*
 
@@ -51,15 +61,19 @@ Lab 5.1: Create and deploy centralized Application Security policies
   :align: center
   :scale: 50%
 
-- Click "Save & Close"
+|
 
-7. Select both *"MyAppVS5"* from BOS-vBIGIP01 and BOS-vBIGIP02 and click *Deploy*
+- Click *Save & Close*
+
+7. Select both *MyAppVS5* from BOS-vBIGIP01 and BOS-vBIGIP02 and click *Deploy*
 
 8. Name the new deployment as **Deploy WAF Policy**
 
 .. image:: ../pictures/module5/img_module5_lab1_7.png
   :align: center
   :scale: 50%
+
+|
 
 9. At the bottom left of the menu you will see a Target Devices section, choose Find Relevant Devices
 
@@ -81,6 +95,8 @@ Lab 5.1: Create and deploy centralized Application Security policies
   :align: center
   :scale: 50%
 
+|
+
 15. Validate successful completion by confirming that status is “Deployment Complete”
 
 16. Log in to the BIG-IP BOS-vBIGIP01 (TMUI) with username (admin) and password (admin)
@@ -93,6 +109,8 @@ Lab 5.1: Create and deploy centralized Application Security policies
   :align: center
   :scale: 50%
 
+|
+
 18. Launch a SSH session to Ubuntu Lamp Server using your local SSH client and launch the following command:
 
 - *# /home/f5/scripts/generate_bad_vs5.sh*
@@ -101,30 +119,38 @@ Lab 5.1: Create and deploy centralized Application Security policies
 19. Return to the BIG-IQ UI and navigate to Policy Building Suggestions of policy "CPB_Policy"
 
 - You should see some suggestions appearing after few seconds
-- Look for a learned action "Delete File Type" with violation 'illegal file type' with entity value *'exe'*
+- Search for a learned action "Delete File Type" with violation 'illegal file type' with entity value *'exe'*
 
 .. image:: ../pictures/module5/img_module5_lab1_11.png
   :align: center
   :scale: 50%
 
+|
+
 - Click on the "Delete File Type" link
-- This will bring up a detailed suggestion menu. Choose Accept in the *Actions* button and confirm
+- This will bring up a detailed suggestion page. Choose Accept in the *Actions* button and confirm
 
 .. image:: ../pictures/module5/img_module5_lab1_12.png
   :align: center
   :scale: 50%
 
-20. Go back to *Policies -> CPB_Policy* - choose Deploy in the *More* button
+|
+
+20. Go back to *Policies -> CPB_Policy* - choose *Deploy* in the *More* button
 
 .. image:: ../pictures/module5/img_module5_lab1_13.png
   :align: center
   :scale: 50%
 
-21. Name the new deployment as **Deploy-WAF-suggestions** and deploy it immediately without an evaluation
+|
+
+21. Name the new deployment as **Deploy WAF suggestions** and deploy it immediately without an evaluation
 
 .. image:: ../pictures/module5/img_module5_lab1_14.png
   :align: center
   :scale: 50%
+
+|
 
 22. At the bottom left of the menu you will see a Target Devices section, choose Find Relevant Devices
 
@@ -133,6 +159,8 @@ Lab 5.1: Create and deploy centralized Application Security policies
 .. image:: ../pictures/module5/img_module5_lab1_15.png
   :align: center
   :scale: 50%
+
+|
 
 24. Validate successful completion by confirming that status is “Deployment Complete”
 
