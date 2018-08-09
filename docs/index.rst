@@ -1,4 +1,4 @@
-F5 BIG-IQ & Cloud Edition Lab - Index
+F5 BIG-IQ 6.0 & Cloud Edition Lab - Index
 =====================================
 
 Welcome

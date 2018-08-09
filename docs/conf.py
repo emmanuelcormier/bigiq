@@ -5,7 +5,7 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "F5 BIG-IQ & Cloud Edition Training"
+classname = "F5 BIG-IQ 6.0 & Cloud Edition Training"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/emmanuelcormier/bigiq/"

@@ -28,28 +28,32 @@ In this lab setup, the devices have BOS in the name to indicate that they are in
   :align: center
   :scale: 50%
 
-5. Click on the **Back Up & Restore** and **Backup Schedules** on the left-hand menu
+|
+
+5. Click on the **BACK UP & RESTORE** and **Backup Schedules** on the left-hand menu
 
 .. image:: ../pictures/module2/img_module2_lab2_2.png
   :align: center
   :scale: 50%
 
+|
+
 6. Click the **Create** button in the main pane
 
 7. Fill out the Backup Schedule
 
-- Name: BostonNightly
-- Local Retention Policy: Delete local backup copy 3 days after creation
-- Backup Frequency: Daily
-- Start Time 00:00 Central European Summer Time
-- Under Devices, select the Groups radio button
-- Select from the drop-down list the **BostonDCGroup**
-- Archive: Store Archive Copy of Backup
-- Location: SCP
-- IP Address: 10.1.10.80
-- User name: f5
-- Password: default
-- Directory: /home/f5
+- Name: *BostonNightly*
+- Local Retention Policy: *Delete local backup copy 3 days after creation*
+- Backup Frequency: *Daily*
+- Start Date: *00:00 Central European Summer Time*
+- Under Devices, select the *Groups* radio button
+- Select from the drop-down list the *BostonDCGroup*
+- Archive: *Store Archive Copy of Backup*
+- Location: *SCP*
+- IP Address: *10.1.10.80*
+- User name: *f5*
+- Password: *default*
+- Directory: */home/f5*
 
 .. image:: ../pictures/module2/img_module2_lab2_3a.png
   :align: center
@@ -59,4 +63,10 @@ In this lab setup, the devices have BOS in the name to indicate that they are in
     :align: center
     :scale: 50%
 
+|
+
 5. Click **Save & Close** to save the scheduled backup job.
+
+|
+
+You have successfully configured and scheduled the backup of a group of devices from BIG-IQ.
